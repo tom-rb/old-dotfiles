@@ -16,6 +16,12 @@ CapsLock::ESC
 ; [Win] [-] writes – (large dash)
 #-::Send –
 
+; [Win] [Shift] [Tab] writes \t
+#+Tab::
+	Clipboard := A_Tab
+	Send, ^v
+Return
+
 ; [Ctrl] [Win] [space] writes non-breaking space
 ^#space::Send % Chr(160)
 
